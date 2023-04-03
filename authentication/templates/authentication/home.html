@@ -1,0 +1,40 @@
+{% load static %}
+
+<html>
+    <head><title>LITReview</title></head>
+    <link rel="stylesheet" href="{% static 'authentication/styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <body>
+        <header>
+            <h1 class="title"> LITReview </h1>
+        </header>
+            <main  class="container-home">
+                  <section class="section sectionsignup">
+                    <p class="home homesignup"> Inscrivez-vous maintenant</p>
+                    <a href="{% url 'signup' %}"><button class="signuplogin">S'inscrire</button></a>
+                  </section>
+                  <section class="section sectionlogin">
+                      <p class="home homelogin"> Connectez-vous</p>
+                      <form method="post">
+
+                          {% csrf_token %}
+                          <div class="form-group border">
+                            <p> Nom d'utilisateur : </p>
+                            {{ form.username }}
+                          </div>
+
+                          <div class="form-group border ">
+                            <p class="pw"> Mot de passe : </p>
+                            {{ form.password }}
+                          </div>
+
+                        <button class="signuplogin" type="submit" >Se connecter</button>
+                      </form>
+                  </section>
+            </main>
+    </body>
+</html>
+

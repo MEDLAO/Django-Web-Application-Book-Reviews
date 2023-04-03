@@ -1,0 +1,25 @@
+{% load review_extras %}
+
+<div class="feed reviewfeed">
+    <p class="datetime">{{ instance.time_created }}</p>
+    <p class="posted"> {% get_poster_display instance.user %} publié une critique </p>
+    <div class="sameline">
+        <p class="beforerating"> {{ instance.headline }} - </p>
+        {% include 'reviews/partials/rating_snippet.html' %}
+    </div>
+    <p> {{ instance.body }} </p>
+
+    <div class="ticketinsidereview">
+        <p>{{ instance.ticket.title }}</p>
+        <p>{{ instance.ticket.description }}</p>
+            {% if instance.ticket.image %}
+                <img src="{{ instance.ticket.image.url }}">
+            {% endif %}
+    </div>
+    <div class="threebtns">
+        {% if request.user.id == instance.user.id %}
+        <a href="{% url 'review_update' instance.id %}"><button>Modifier</button></a>
+        <a href="{% url 'review_delete' instance.id %}"><button>Supprimer</button></a>
+        {% endif %}
+    </div>
+</div>

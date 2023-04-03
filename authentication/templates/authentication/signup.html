@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+    <head><title>LITReview</title></head>
+    <link rel="stylesheet" href="{% static 'authentication/styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <body>
+        <header>
+            <h1 class="title"> LITReview </h1>
+        </header>
+      <main>
+        <h2> Inscrivez-vous </h2>
+        {% if form.errors %}
+            {{ form.errors }}
+        {% endif %}
+        <form class="signupform" method="post">
+          {{ form.as_p }}
+          {% csrf_token %}
+            <div id="contsignup">
+                <button id="signup1" onclick="history.back()">Retourner</button>
+                <button id="signup2" type="submit" >S'inscrire</button>
+            </div>
+
+        </form>
+
+      </main>
+
+    </body>
+</html>

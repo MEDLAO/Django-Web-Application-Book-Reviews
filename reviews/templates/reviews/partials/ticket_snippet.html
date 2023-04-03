@@ -1,0 +1,19 @@
+{% load review_extras %}
+
+<div class="feed ticketfeed">
+    <p class="datetime">{{ instance.time_created }}</p>
+    <p class="posted"> {% get_poster_display instance.user %} demandé une critique </p>
+    <p>{{ instance.title }}</p>
+    <p>{{ instance.description }}</p>
+    {% if instance.image %}
+        <img src="{{ instance.image.url }}">
+    {% endif %}
+
+    <div class="threebtns">
+        {% if request.user.id == instance.user.id %}
+            <a href="{% url 'ticket_update' instance.id %}"><button>Modifier</button></a>
+            <a href="{% url 'ticket_delete' instance.id %}"><button>Supprimer</button></a>
+        {% endif %}
+        <a href="{% url 'review_from_ticket' instance.id %}"><button>Créer une critique</button></a>
+    </div>
+</div>

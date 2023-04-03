@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Follow :</h1>
+
+<p class="delete">S'abonner à  : {{ user_to_follow.username }} ?</p>
+<p> {{ message }} </p>
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    <div class="confirmdelete">
+        <button class="btndelete1" type="submit"> S'abonner </button>
+        <a href="{% url 'subscriptions' %}"><button class="btndelete2" type="button"> Retourner </button></a>
+    </div>
+
+</form>
+
+{% endblock %}

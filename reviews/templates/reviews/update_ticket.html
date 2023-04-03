@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2> Modifier votre ticket  </h2>
+{% if ticket.image %}
+        <div class="container updateticket">
+{% else %}
+        <div class="container updateticket2">
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group border">
+                <p> Titre : </p>
+                {{ form.title }}
+        </div>
+
+        <div class="form-group border">
+                <p> Description : </p>
+                {{ form.description }}
+        </div>
+
+        <div class="form-group border">
+                <p> Image : </p>
+                {% if ticket.image %}
+                        <img id="imgupdatet" src="{{ ticket.image.url }}">
+                {% endif %}
+
+                {{ form.image}}
+        </div>
+        <div class="form-group">
+                <button class="btnupdatet" type="submit" >Envoyer</button>
+        </div>
+
+</form>
+</div>
+
+{% endblock %}

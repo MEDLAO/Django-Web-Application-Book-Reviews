@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<html>
+    <head>
+        <title>LITReview</title>
+        <link rel="stylesheet" href="{% static 'authentication/styles.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <header>
+
+            <h1 class="title"> LITReview  </h1>
+            <div class="headernavuser">
+                <p class="user"> Utilisateur : {{user.username}}</p>
+                <nav class="box">
+                    <a class="menu" href="{% url 'feed' %}">Flux</a>
+                    <a class="menu" href="{% url 'my_posts' %}">Posts</a>
+                    <a class="menu" href="{% url 'subscriptions' %}">Abonnements</a>
+                    {% if user.is_authenticated %}
+                        <a class="menu" href="{% url 'home' %}">Se déconnecter</a>
+                    {% endif %}
+                </nav>
+            </div>
+
+        </header>
+
+        <main>
+             {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <a href="#" class="fa fa-facebook socialnet"></a>
+            <a href="#" class="fa fa-twitter socialnet"></a>
+            <a href="#" class="fa fa-google socialnet"></a>
+            <a href="#" class="fa fa-youtube socialnet"></a>
+            <a href="#" class="fa fa-instagram socialnet"></a>
+        </footer>
+
+    </body>
+</html>

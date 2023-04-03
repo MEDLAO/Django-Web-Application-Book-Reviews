@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load review_extras %}
+{% block content %}
+
+<div class="containerbtnfeed">
+    <a  href="{% url 'ticket_create' %}"><button class="btnfeed1">Demander une critique</button></a>
+    <a  href="{% url 'review_create' %}"><button class="btnfeed2">Créer une critique</button></a>
+</div>
+
+
+{% for instance in page_obj %}
+    {% if instance.content_type == 'TICKET' %}
+        {% include 'reviews/partials/ticket_snippet.html' %}
+    {% elif instance.content_type == 'REVIEW' %}
+        {% include 'reviews/partials/review_snippet.html' %}
+    {% endif %}
+{% endfor %}
+
+<div class="paginator">
+
+    {% if page_obj.has_previous %}
+        <a href="?page=1"><button class="btnpaginator firstbtn" type="button">première</button></a>
+        <a href="?page={{ page_obj.previous_page_number }}"><button class="btnpaginator" type="button">précédente</button></a>
+    {% endif %}
+
+    <span class="pagenumber">Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}"><button class="btnpaginator firstbtn" type="button"> suivante </button></a>
+        <a href="?page={{ page_obj.paginator.num_pages }}"><button class="btnpaginator" type="button">dernière</button></a>
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2> Suivre d'autres utilisateurs </h2>
+<form method=POST action="{% url 'search-user' %}">
+    {% csrf_token %}
+    <div class="cont">
+        <input class="searchbar" type="search" placeholder="Nom d'utilisateur" aria-label="Search" name="searched">
+        <button class="followers" type="submit" >Envoyer</button>
+    </div>
+
+</form>
+
+
+<h2> Abonnements </h2>
+
+
+        {% for foll in following %}
+            <div class="borderfollowed">
+                <div class="tdbtn">
+                {{foll.followed_user.username}}
+                </div>
+                <a href="{% url 'unfollow' foll.id %}"><button class="followers send">Désabonner</button></a>
+            </div>
+
+        {% endfor %}
+
+
+
+
+
+<h2> Abonnés </h2>
+
+        {% for follower in followers %}
+            <div class="borderfollowed">
+                <div class="tdbtn">
+                {{follower.user.username}}
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2> Créer un ticket  </h2>
+<div class="container createticket">
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group border">
+                <p> Titre : </p>
+                {{ ticket_form.title }}
+        </div>
+
+        <div class="form-group border">
+                <p> Description : </p>
+                {{ ticket_form.description }}
+        </div>
+
+        <div class="form-group border">
+                <p> Image : </p>
+                {{ ticket_form.image}}
+        </div>
+        <div class="form-group">
+                <button class="btnupdatet" type="submit" >Envoyer</button>
+        </div>
+
+</form>
+</div>
+
+
+{% endblock %}
+

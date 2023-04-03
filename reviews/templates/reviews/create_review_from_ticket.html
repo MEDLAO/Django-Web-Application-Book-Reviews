@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load review_extras %}
+{% block content %}
+
+<h2> Créer une critique à partir d'un ticket  </h2>
+
+<div class="container borderrespond">
+
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Vous êtes en train de poster en réponse à </p>
+        <div class="ticketrespond">
+
+                <div class="date respond">
+                        {{ ticket.time_created }}
+                </div>
+
+                <p class="posted prespond"> {% get_poster_display ticket.user %} demandé une critique </p>
+
+                <div class="respond">
+                        {{ ticket.title }}
+                </div>
+
+                <div class="respond">
+                        {{ ticket.description }}
+                </div>
+
+                <div class="respond">
+                        {% if ticket.image %}
+                                <img src="{{ ticket.image.url }}">
+                        {% endif %}
+                </div>
+        </div>
+
+
+        <div class="form-group border">
+                <p> Titre  </p>
+                {{ review_form.headline }}
+        </div>
+
+        <div class="form-group border">
+                <p> Note  </p>
+                {{ review_form.rating }}
+        </div>
+
+        <div class="form-group border">
+                <p> Commentaire  </p>
+                {{ review_form.body}}
+        </div>
+
+        <div class="form-group">
+                <button type="submit" >Envoyer</button>
+        </div>
+
+</form>
+</div>
+
+{% endblock %}

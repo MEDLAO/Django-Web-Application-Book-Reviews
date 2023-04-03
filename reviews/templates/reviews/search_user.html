@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% if searched %}
+        <h1> Vous avez recherché {{searched}}. </h1>
+        <p class="psearch"> Les utilisateurs correspondants sont : </p>
+        <br/>
+        {% for user in users_to_follow %}
+            <div class="divsearch">
+                <p class="psearch founduser"> {{user.username}} </p><br/>
+                <a href="{% url 'follow' user.id %}"><button class="btnsearch" type="button"> Page détaillée </button></a>
+
+            </div>
+
+
+        {% endfor %}
+
+    {% else %}
+        <h1> Vous avez oublié d'effectuer une recherche </h1>
+    {% endif %}
+
+{% endblock %}
