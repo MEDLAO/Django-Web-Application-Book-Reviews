@@ -45,7 +45,7 @@ def ticket_update(request, ticket_id):
 
 @login_required
 def ticket_delete(request, ticket_id):
-    ticket = Ticket.objects.get(id=ticket_id)  # nécessaire pour GET et pour POST
+    ticket = Ticket.objects.get(id=ticket_id)
 
     if request.method == 'POST':
         # delete the ticket from the database with a Django built-in function
