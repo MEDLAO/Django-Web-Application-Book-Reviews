@@ -77,7 +77,7 @@ publiés par l'utilisateur
 4. Activer l'environnement virtuel en éxécutant :
   > $ <b>source env/bin/activate</b>  (sur Mac) 
 
-  > $ <b>env/Scripts/activate.bat</b> (sur Windows)
+  > $ <b>env\Scripts\activate.bat</b> (sur Windows)
 5. Installer les paquets présents dans le fichier requirements.txt (ce fichier se trouve dans le dossier du projet) avec :
   > $ <b>pip install -r requirements.txt</b> 
 6. Finalement, exécuter le serveur de développement avec :

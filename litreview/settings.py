@@ -127,6 +127,5 @@ STATIC_URL = 'static/authentication/styles.css/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR.joinpath('media/')
-
+MEDIA_URL = '/media/'  # the URL from which Django will try to serve media
+MEDIA_ROOT = BASE_DIR.joinpath('media/')  # the local directory where Django save uploaded images

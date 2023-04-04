@@ -2,10 +2,10 @@
 <div class="rating-star">
 
     <!-- By default the star is full else it is empty otherwise it is half -->
-    <i class="fa fa-star{% if instance.rating < 1%}-o{% endif %}" aria-hidden="true"></i>
-    <i class="fa fa-star{% if instance.rating < 2%}-o{% endif %}" aria-hidden="true"></i>
-    <i class="fa fa-star{% if instance.rating < 3%}-o{% endif %}" aria-hidden="true"></i>
-    <i class="fa fa-star{% if instance.rating < 4%}-o{% endif %}" aria-hidden="true"></i>
-    <i class="fa fa-star{% if instance.rating < 5%}-o{% endif %}" aria-hidden="true"></i>
+    <i class="fa fa-star{% if instance.rating < 1 or instance.rating == 0%}-o{% endif %}" aria-hidden="true"></i>
+    <i class="fa fa-star{% if instance.rating < 2 or instance.rating == 0%}-o{% endif %}" aria-hidden="true"></i>
+    <i class="fa fa-star{% if instance.rating < 3 or instance.rating == 0%}-o{% endif %}" aria-hidden="true"></i>
+    <i class="fa fa-star{% if instance.rating < 4 or instance.rating == 0%}-o{% endif %}" aria-hidden="true"></i>
+    <i class="fa fa-star{% if instance.rating < 5 or instance.rating == 0%}-o{% endif %}" aria-hidden="true"></i>
 
 </div>

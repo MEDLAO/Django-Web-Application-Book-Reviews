@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Ticket, Review, UserFollows
 
+# we choose here how we want to display our models and data in the admin interface
+
 
 class TicketAdmin(admin.ModelAdmin):
     list_display = ('title', 'user')

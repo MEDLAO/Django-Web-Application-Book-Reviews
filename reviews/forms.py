@@ -5,8 +5,8 @@ from . import models
 
 
 class TicketForm(forms.ModelForm):
-
-    class Meta:
+    # Our form inherit from ModelForm, it lets the model define the form fields automatically
+    class Meta:  # inner class specifies the model for which this form will be used
         model = models.Ticket
         fields = ['title', 'description', 'image']
         labels = {
@@ -45,7 +45,7 @@ class TicketForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     rating = forms.ChoiceField(
         widget=RadioSelect(attrs={'class': 'inline', 'style': 'accent-color: #2F4F4F; border: 3px solid #FFF;'}),
-        choices=[(1, '- 1'), (2, '- 2'), (3, '- 3'), (4, '- 4'), (5, '- 5')]
+        choices=[(0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')]  # set the Radio Button for the rating
     )
 
     class Meta:

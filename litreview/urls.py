@@ -20,7 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 import reviews.views
 
-
+# we connect each view to a URL by using the path module
+# endpoint / the view we want to associate to this URL / a name of view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', authentication.views.login_page, name='home'),

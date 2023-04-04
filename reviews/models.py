@@ -21,12 +21,11 @@ class Ticket(models.Model):
         if self.image:
             image = Image.open(self.image)
             image.thumbnail(self.IMAGE_MAX_SIZE)
-            # sauvegarde de l’image redimensionnée dans le système de fichiers
-            # ce n’est pas la méthode save() du modèle !
+            # save the resized image to the file system
             image.save(self.image.path)
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs)  # we use super to ensure that saving the object to the database still works
         self.resize_image()
 
 
