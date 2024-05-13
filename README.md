@@ -1,23 +1,22 @@
-## Projet : Développez une application Web en utilisant Django
-### Tables des matières :
-1. Description générale du projet.
-2. Configurations compatibles.
-3. Installation du programme.
-4. Fonctionnalités.
-5. Démarrage du programme.
+## Project : Develop a web application using Django
 
-## 1. Descripton générale du projet :
+### Table of contents :
+1. Project description/Scenario.
+2. Compatible configurations.
+3. Installing the program.
+4. Features.
+5. Running the program.
 
-Ce projet a été réalisé dans le cadre de la formation de
-développeur Python proposée par OpenClassrooms. 
+## 1. Project description/Scenario :
 
-La startup LITReview a pour objectif de commercialiser  un produit permettant à une communauté d'utilisateurs
-de consulter ou de solliciter une critique de livres à la demande.
-Par conséquent, LITReview cherche à mettre en place une application Web pour son MVP (minimum viable product,
-ou produit viable minimum).
+This project was carried out as part of the Python Developer training offered by OpenClassrooms.
 
-Le back-end de cette application Web a été développé avec le framework Django et le front-end avec HTML et CSS.
+The startup LITReview aims to market a product that allows a community of users to consult or 
+request a book review on demand. Consequently, LITReview is looking to create a web application 
+for its MVP (minimum viable product).
 
+The back-end of this web application has been developed with the Django framework, 
+and the front-end with HTML and CSS.
 
 ## 2. Configurations compatibles :
 
@@ -26,8 +25,8 @@ Le back-end de cette application Web a été développé avec le framework Djang
 * Mac
 * Linux
 
-## 3. Installation du programme :
-Ce programme utilise les librairies Python suivantes :
+## 3. Installing the program :
+This program uses the following Python libraries :
 
 ```
 asgiref 3.6.0
@@ -36,53 +35,54 @@ Pillow 9.4.0
 sqlparse 0.4.3
 ```
 
-## 4. Fonctionnalités :
+## 4. Features :
 
-### *Authentification* : 
+### *Authentication* : 
   * Inscription
-  * Connexion
+  * Connection
 ### *Menu* : 
-  * Flux
+  * Feed
   * Posts 
-  * Abonnements
-  * Déconnexion
-### *Flux* : 
-  * Affichage par ordre chronologique (le plus récent en haut de page) de l'ensemble des tickets et des critiques :
-    * de l'utilisateur
-    * des utilisateurs auxquels est abonné l'utilisateur 
-  * Demander une critique sur un livre/article (c'est-à-dire créer un ticket)
-  * Créer une critique:
-    * en réponse à un ticket précédemment publié par un autre utilisateur
-    * et un ticket (pas en réponse à un ticket précédent)
-  * Modifier/Supprimer un ticket
-  * Modifier/Supprimer une critique
+  * Subscriptions
+  * Logout
+### *Feed* : 
+  * Display in chronological order (most recent at the top) of all tickets and reviews :
+    * of the user
+    * of the users to whom the user is subscribed 
+  * Request a review on a book/article (i.e., create a ticket)
+  * Create a review:
+    * in response to a ticket previously posted by another user
+    * and a ticket (not in response to a previous ticket)
+  * Edit/Delete a ticket
+  * Edit/Delete a review
 ### *Posts* : 
   * Affichage par ordre chronologique (le plus récent en haut de page) de l'ensemble des tickets et des critiques 
 publiés par l'utilisateur
-### *Abonnements* :
-  * Consulter la liste:
-    * des utilisateurs suivant l'utilisateur connecté
-    * des utilisateurs suivis par l'utilisateur connecté
-  * Chercher un utilisateur à suivre avec la barre de recherche
-  * S'abonner à un utilisateur
-  * Se désabonner d'un utilisateur
+### *Subscriptions* :
+  * Consult the list:
+    * of the users following the connected user
+    * of the users followed by the connected user
+  * Search for a user to follow using the search bar
+  * Follow a user
+  * Unfollow a user
  
     
-## 5. Démarrage du programme :
+## 5. Running the program :
 
-1. Ouvrir un terminal (ex: Cygwin pour Windows, le terminal pour Mac) ou dans un IDE (ex: PyCharm).
-2. Télécharger le dossier contenant le projet puis se placer dans ce dossier sur le terminal.
-3. Créer un environnement virtuel avec :
+1. Open a terminal (e.g., Cygwin for Windows, the Terminal for Mac) or in an IDE (e.g., PyCharm).
+2. Download the folder containing the project then go in this folder on the terminal.
+3. Create a virtual environment with :
   > $<b> python -m venv <nom de l'environnement></b> 
-4. Activer l'environnement virtuel en éxécutant :
-  > $ <b>source env/bin/activate</b>  (sur Mac) 
+4. Activate the virtual environment via :
+  > $ <b>source env/bin/activate</b>  (on Mac) 
 
-  > $ <b>env\Scripts\activate.bat</b> (sur Windows)
-5. Installer les paquets présents dans le fichier requirements.txt (ce fichier se trouve dans le dossier du projet) avec :
+  > $ <b>env\Scripts\activate.bat</b> (on Windows)
+5. Install the packages present in requirements.txt file (this file is located in the project
+folder with main.py) with:
   > $ <b>pip install -r requirements.txt</b> 
-6. Finalement, exécuter le serveur de développement avec :
+6. Finally, run the development server with :
 > $ <b>python manage.py runserver</b>
-7. Consulter le site à l'adresse suivante :
+7. Access the site at the following address:
 
       **http://127.0.0.1:8000/**
 ---
