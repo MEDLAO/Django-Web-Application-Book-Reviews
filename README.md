@@ -56,8 +56,8 @@ sqlparse 0.4.3
   * Edit/Delete a ticket
   * Edit/Delete a review
 ### *Posts* : 
-  * Affichage par ordre chronologique (le plus récent en haut de page) de l'ensemble des tickets et des critiques 
-publiés par l'utilisateur
+  * Display in chronological order (most recent at the top) of all tickets and reviews posted
+by the user.
 ### *Subscriptions* :
   * Consult the list:
     * of the users following the connected user
