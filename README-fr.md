@@ -1,5 +1,7 @@
 ## Projet : Développez une application Web en utilisant Django
 
+[**English**](README.md)
+
 ### Tables des matières :
 1. Description générale du projet/Scénario.
 2. Configurations compatibles.
