@@ -2,15 +2,15 @@
 
 [**Français**](README-fr.md)
 <p align="center">
-  <img src="media/pictures-readme/litreview-database-diagram.png" width="125" height="150" />
-  <img src="media/pictures-readme/litreview-wireframe-1.png" width="125" height="150" />
-  <img src="media/pictures-readme/litreview-wireframe-2.png" width="125" height="150" />
+  <img src="media/pictures-readme/litreview-database-diagram.png" width="150" height="175" />
+  <img src="media/pictures-readme/litreview-wireframe-1.png" width="150" height="175" />
+  <img src="media/pictures-readme/litreview-wireframe-2.png" width="150" height="175" />
 </p>
 <p align="center">
-  <img src="media/pictures-readme/litreview-website-1.png" width="125" height="150" />
-  <img src="media/pictures-readme/litreview-website-2.png" width="125" height="150" />
-  <img src="media/pictures-readme/litreview-website-3.png" width="125" height="150" />
-  <img src="media/pictures-readme/litreview-website-4.png" width="125" height="150" />
+  <img src="media/pictures-readme/litreview-website-1.png" width="150" height="175" />
+  <img src="media/pictures-readme/litreview-website-2.png" width="150" height="175" />
+  <img src="media/pictures-readme/litreview-website-3.png" width="150" height="175" />
+  <img src="media/pictures-readme/litreview-website-4.png" width="150" height="175" />
 </p>
 
 ### Table of contents :
